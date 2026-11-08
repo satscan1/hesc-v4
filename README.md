@@ -11,8 +11,8 @@
 *Nederlands: [README.nl.md](README.nl.md) · Deutsch: [README.de.md](README.de.md)*
 
 HESC charges your electric car with your own solar power as much as it can, and from the grid at
-the cheapest moments when the sun is not enough. HESC v4 follows HESC v3: easier to set up, with its
-own panel in Home Assistant and with **two cars and two chargers**.
+the cheapest moments when the sun is not enough. HESC v4 is the successor of HESC v3: easier to set
+up, with its own panel in Home Assistant and with **two cars and two chargers**.
 
 <p align="center"><img src="https://raw.githubusercontent.com/satscan1/hesc-v4/main/docs/images/infographic-en.png" width="100%" alt="HESC v4 at a glance"></p>
 
@@ -22,30 +22,43 @@ The panel follows the language of your Home Assistant profile: Dutch, German, an
 
 ![Overview](docs/images/v4/en/en-01-overview.jpg)
 
+## Contents
+
+1. [Install](#1-install)
+2. [The first start](#2-the-first-start)
+3. [What HESC finds and what you fill in](#3-what-hesc-finds-and-what-you-fill-in)
+4. [One or two cars, one or two chargers](#4-one-or-two-cars-one-or-two-chargers)
+5. [The panel](#5-the-panel)
+6. [Planning](#6-planning)
+7. [Settings](#7-settings)
+8. [HESC on, off and shadow](#8-hesc-on-off-and-shadow)
+9. [Costs, solar forecast and report](#9-costs-solar-forecast-and-report)
+10. [Not ready yet](#not-ready-yet)
+
 ## 1. Install
 
 1. Add the repository in HACS and install **HESC v4**. Restart Home Assistant.
 2. *Settings → Devices & services → Add integration → HESC v4*.
-3. One question: **Install HESC v4?** With HESC v3 installed you can take over v3's settings.
-4. **HESC v4** appears in the sidebar; the first start begins there.
+3. One question: **Install HESC v4?** With HESC v3 installed you can also take over v3's settings.
+4. **HESC v4** appears in the sidebar. The first start begins there.
 
 After installing, HESC is in **shadow mode**: it calculates and shows what it would do, but switches
 nothing. Shadow mode can only be switched off once the first start is done.
 
 ## 2. The first start
 
-First a few questions, then only what HESC did not find itself.
+The first start asks a few things first, and after that only what HESC did not find itself.
 
-1. **How do you charge at home?** One car · two cars on one charger · two cars, each its own charger.
+1. **How do you charge at home?** One car · two cars on one charger · two cars, each with its own charger.
 2. **Your house.** Connection (1 or 3 phases, amps), load balancer, solar panels, dynamic prices, and
    the confirmation that your installation can take the charging.
 3. **Charger.** Pick the brand. With two chargers of the same brand you choose which is which.
 4. **Car.** Name, colour and battery capacity (the latter only when the car does not report it).
-5. **What HESC did not find**, for example the battery-level sensor or the prices.
+5. **What HESC did not find.** For example the battery-level sensor or the prices.
 
 With a Wallbox and one car this is about 9 taps.
 
-## 3. What HESC finds, what you fill in
+## 3. What HESC finds and what you fill in
 
 | Part | Plug and play | You fill in |
 |---|---|---|
@@ -55,77 +68,87 @@ With a Wallbox and one car this is about 9 taps.
 | Prices | Grid Clock, EnergyZero/ANWB, EasyEnergy, Tibber, Nord Pool | *Price list in a sensor*: pick the sensor |
 | Battery capacity | when the car reports it | otherwise you type it |
 | Home battery | HESC makes a suggestion | always your choice (per battery, or one total sensor) |
-| Weather station | — | switch it on and pick the sensor |
+| Weather station | — | switch it on yourself and pick the sensor |
 
 Every setting has a small **(i)** with one or two sentences of explanation.
 
 ## 4. One or two cars, one or two chargers
 
 - **One car, one charger.** The usual case.
-- **Two cars, one charger.** HESC plans both cars: the first before the time you set to move the cable,
-  the other after. The overview says when to swap; a reminder on your phone is possible (*Settings › Standard ›
-  Move the cable*).
+- **Two cars, one charger.** HESC plans both cars: the first before the time you move the cable,
+  the other after. The overview says when to swap; a reminder on your phone is possible
+  (*Settings › Standard › Move the cable*).
 - **Two cars, two chargers.** Each car has its own charger; same brand or different.
 
-Adding and removing: *Settings › Basis › Auto's en laadpalen*.
+Adding and removing is done in *Settings › Basic › Cars and chargers*:
 - **+ Add car** — a second car, on the same charger or with its own.
 - **+ Add charger** — when two cars share one charger, car 2 gets its own charger.
-- **Remove** — only car 2 and charger 2. HESC first shows what will go and asks for confirmation.
-  Charging costs and history are not deleted but kept.
+- **Remove** — only car 2 and charger 2. HESC first shows what will go and asks for
+  confirmation. Charging costs and history are not deleted but kept.
 
 ## 5. The panel
 
-A row of buttons at the top: **Live · stuurt** (shadow mode), the planning per car, **Kosten** (costs),
-**Zonverwachting** (solar forecast), **Instellingen** (settings), **Rapport** (report) and **Uitleg** (help).
+At the top a row of buttons: **Live** (shadow mode), the planning per car, **Costs**,
+**Solar forecast**, **Settings**, **Report** and **Guide**.
 
-**Today and tomorrow** — on the left a short letter per car (when it charges, from sun or grid, to what %
-and the cost), on the right the chart with forecast, price and the charging moments per car.
+**Today and tomorrow** — on the left a short letter per car (when it charges, from sun or grid, to what
+% and what it costs), on the right the chart with solar forecast, price and the charging moments per car.
 **Coming week** — per car the next seven days; tap a car or a day to open its planning.
 
 ## 6. Planning
 
-- **Rhythm** — a default ready time and battery %, per weekday on or off, or with its own time or %.
-- **Only this time** — skip the next time, another time or %, or **charge now**.
-- **Calendar** — single days off or extra, and holidays (drag from the first to the last day).
-- **Not plugged in** — a reminder when the car is not plugged in in the evening.
+![Planning](docs/images/v4/en/en-02-planning.jpg)
+
+- **Rhythm** — a standard ready time and battery %, per weekday on or off, or with its own time or %.
+- **This time only** — skip the next time, another time or %, or **charge now**.
+- **Calendar** — single days off or extra, and a vacation (drag from the first to the last day).
+- **Reminder: not plugged in** — a reminder when the car is not plugged in in the evening.
 
 **Charge now is protected.** The arrows only choose the goal. HESC charges from the grid only after
 **Start** and the confirmation. Stopping is always possible.
 
 ## 7. Settings
 
-Three tabs: **Basis** (charger, car(s), prices, HESC on/off, cars and chargers; the **⏻** tag of a car
-switches HESC on or off for that car), **Standaard** (tiles: charger, solar and grid, home battery,
-notifications, back-up, cheap chances) and **Expert** (tiles for fine tuning; what you change often
-is on the tile itself). A tile shows ✓ when all is fine or ⚠ with what is missing.
+Three tabs:
 
-Picking a sensor: tap the field for a short list with the current choice and HESC's **suggestion** on
-top. The charger's modes for *charging on sun* and *no car* are ticked, not typed.
+- **Basic** — charger, car(s), prices, HESC on/off and *Cars and chargers*. With two cars they are
+  side by side. The **⏻** tag at a car switches HESC on or off for that car.
+- **Standard** — tiles: Charger 1 (and 2), Sun and grid, Home battery, Notifications, Back-up and Cheap
+  chances. A tile shows whether all is fine (✓) or what is missing (⚠); tap it for the details.
+- **Expert** — tiles for the finer tuning: Charger, Sun: start and keep charging (with the
+  weather station), Times and release, HPVC, Advice and Notifications. What you change often is on the tile itself.
+
+![Settings › Basic](docs/images/v4/en/en-05-settings-basic.jpg)
+![Settings › Standard](docs/images/v4/en/en-06-settings-standard.jpg)
+
+**Picking sensors.** Tap a sensor field: you get a short list, with the current choice and HESC's
+**suggestion** on top. After OK, HESC saves it at once. The modes of your charger for *charging on sun* and *no car* are ticked.
 
 ## 8. HESC on, off and shadow
 
 | Switch | What it does |
 |---|---|
-| **HESC staat aan** (Basis) | Main switch. Off = HESC does nothing. |
-| **Schaduwmodus** (Basis and *Live · stuurt*) | HESC calculates and shows what it would do, but controls nothing. |
-| **⏻ per car** (Basis, at the car) | Off = HESC still plans that car but does not control it or its own charger. The other car carries on. |
+| **HESC is on** (Basic) | Main switch. Off = HESC does nothing. |
+| **Shadow mode** (Basic and *Live*) | HESC calculates and shows what it would do, but controls nothing. |
+| **⏻ per car** (Basic, at the car) | Off = HESC still plans for that car, but does not control that car and its own charger. Another car carries on. |
 
-## 9. Costs, forecast and report
+## 9. Costs, solar forecast and report
 
-- **Kosten** — what charging cost per day, week, month and year, from sun and grid; per car with two
-  cars. *Export charging costs* writes two CSV files to the hesc_v4 folder; *Download charging costs* gives them to you.
-- **Zonverwachting** — expected sun against actual, and when the car can charge on sun.
-- **Rapport** — the **charging report** (how charging on sun went, per day, with advice), and
-  **keep or share**: full back-up, anonymous to share, or short for a bug report.
+- **Costs** — what charging cost, per day, week, month and year, from sun and from the grid; with two
+  cars per car. *Export charging costs* puts the costs in two CSV files in the hesc_v4 folder; *Download charging costs* gives them to you.
+- **Solar forecast** — expected sun against actual, and when the car can charge on solar power.
+- **Report** — the **charging report** (how charging on sun went, per day, with advice), and **keep or
+  share**: full back-up, anonymous to share, or short for a bug report.
+
+![Costs](docs/images/v4/en/en-03-costs.jpg)
+![Solar forecast](docs/images/v4/en/en-04-solar-forecast.jpg)
 
 ## Not ready yet
 
 - In English and German some texts may still need polishing; names of your own devices come from Home Assistant.
 
-Screenshots: test board with demo data (invented cars, prices and charging history). More: [planning](docs/images/v4/en/en-02-planning.jpg),
-[costs](docs/images/v4/en/en-03-costs.jpg), [solar forecast](docs/images/v4/en/en-04-solar-forecast.jpg),
-[settings › basic](docs/images/v4/en/en-05-settings-basic.jpg), [settings › standard](docs/images/v4/en/en-06-settings-standard.jpg);
-German: [docs/images/v4/de](docs/images/v4/de/); Dutch: [docs/images/v4/nl](docs/images/v4/nl/).
+Screenshots: test board with demo data (invented cars, prices and charging history). Also in
+[Dutch](docs/images/v4/nl/) and [German](docs/images/v4/de/).
 
 ## Support this project
 
