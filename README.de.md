@@ -1,10 +1,20 @@
-# HESC v4 · Beta — Kurzanleitung
+<p align="center"><img src="https://raw.githubusercontent.com/satscan1/hesc-v4/main/docs/images/hesc-v4-logo.png" width="160" alt="HESC v4"></p>
+
+<p align="center"><a href="https://github.com/satscan1/hesc-v4/releases"><img src="https://img.shields.io/github/v/release/satscan1/hesc-v4?include_prereleases" alt="Release"></a> <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Custom-orange" alt="HACS"></a> <a href="https://github.com/satscan1/hesc-v4"><img src="https://img.shields.io/github/stars/satscan1/hesc-v4?style=flat&logo=github" alt="Stars"></a> <a href="https://ko-fi.com/satscan"><img src="https://img.shields.io/badge/Ko--fi-satscan-FF5E5B?logo=kofi&logoColor=white" alt="Support me on Ko-fi"></a></p>
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=satscan1&repository=hesc-v4&category=integration"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open HESC v4 in HACS"></a></p>
+
+# HESC v4 — Smart EV Charging Management
+
+*Ladeplanung einrichten. Nach Hause kommen, anschließen und HESC erledigt den Rest.*
 
 *English: [README.md](README.md) · Nederlands: [README.nl.md](README.nl.md)*
 
 HESC lädt dein Elektroauto so viel wie möglich mit deinem eigenen Solarstrom und, wenn die Sonne nicht
 reicht, aus dem Netz zu den günstigsten Zeiten. HESC v4 folgt auf HESC v3: einfacher einzurichten, mit
 einem eigenen Panel in Home Assistant und mit **zwei Autos und zwei Wallboxen**.
+
+<p align="center"><img src="https://raw.githubusercontent.com/satscan1/hesc-v4/main/docs/images/infographic-de.png" width="100%" alt="HESC v4 auf einen Blick"></p>
 
 > **Beta.** Dies ist die erste Beta. Die ausführliche Anleitung gibt es vorerst auf Englisch
 > ([README.md](README.md)) und Niederländisch ([README.nl.md](README.nl.md)).
@@ -48,3 +58,13 @@ aber nichts.
 
 Bildschirmfotos: Testboard mit Demodaten (erfundene Autos, Preise und Ladeverlauf). Mehr:
 [docs/images/v4/de](docs/images/v4/de/).
+
+## Unterstütze dieses Projekt
+
+Findest du HESC nützlich? Gib ihm einen ⭐ auf GitHub, damit andere es auch finden.
+
+Möchtest du etwas mehr tun? Unterstütze mich auf [Ko-fi](https://ko-fi.com/satscan).
+
+## Lizenz
+
+[GPL-3.0](LICENSE)

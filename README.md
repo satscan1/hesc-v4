@@ -1,10 +1,20 @@
-# HESC v4 · beta — manual
+<p align="center"><img src="https://raw.githubusercontent.com/satscan1/hesc-v4/main/docs/images/hesc-v4-logo.png" width="160" alt="HESC v4"></p>
+
+<p align="center"><a href="https://github.com/satscan1/hesc-v4/releases"><img src="https://img.shields.io/github/v/release/satscan1/hesc-v4?include_prereleases" alt="Release"></a> <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Custom-orange" alt="HACS"></a> <a href="https://github.com/satscan1/hesc-v4"><img src="https://img.shields.io/github/stars/satscan1/hesc-v4?style=flat&logo=github" alt="Stars"></a> <a href="https://ko-fi.com/satscan"><img src="https://img.shields.io/badge/Ko--fi-satscan-FF5E5B?logo=kofi&logoColor=white" alt="Support me on Ko-fi"></a></p>
+
+<p align="center"><a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=satscan1&repository=hesc-v4&category=integration"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open HESC v4 in HACS"></a></p>
+
+# HESC v4 — Smart EV Charging Management
+
+*Set your plan. Plug in. HESC takes care of the rest.*
 
 *Nederlands: [README.nl.md](README.nl.md) · Deutsch: [README.de.md](README.de.md)*
 
 HESC charges your electric car with your own solar power as much as it can, and from the grid at
 the cheapest moments when the sun is not enough. HESC v4 follows HESC v3: easier to set up, with its
 own panel in Home Assistant and with **two cars and two chargers**.
+
+<p align="center"><img src="https://raw.githubusercontent.com/satscan1/hesc-v4/main/docs/images/infographic-en.png" width="100%" alt="HESC v4 at a glance"></p>
 
 > **Beta.** This is the first beta. See [Not ready yet](#not-ready-yet).
 
@@ -116,3 +126,13 @@ Screenshots: test board with demo data (invented cars, prices and charging histo
 [costs](docs/images/v4/en/en-03-costs.jpg), [solar forecast](docs/images/v4/en/en-04-solar-forecast.jpg),
 [settings › basic](docs/images/v4/en/en-05-settings-basic.jpg), [settings › standard](docs/images/v4/en/en-06-settings-standard.jpg);
 German: [docs/images/v4/de](docs/images/v4/de/); Dutch: [docs/images/v4/nl](docs/images/v4/nl/).
+
+## Support this project
+
+Find HESC useful? Give it a ⭐ on GitHub, so others can find it too.
+
+Want to do a little more? Support me on [Ko-fi](https://ko-fi.com/satscan).
+
+## License
+
+[GPL-3.0](LICENSE)
